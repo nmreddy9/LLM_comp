@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import pipeline
-from langchain_community.llms import HuggingFaceHub
-from langchain_community.llms import PromptTemplate, LLMChain
+from langchain import HuggingFaceHub
+from langchain import PromptTemplate, LLMChain
 
 
 def summarize_text(input_text):
