@@ -73,23 +73,38 @@ if st.button("Process"):
     if selected_task == "Summarization" and input_text:
         st.subheader("Summary:")
         result = summarize_text(input_text)
-        st.write(result)
+        try:
+            st.write(result)
+        except:
+            st.write("Please try after one hour")
+
 
 
     elif selected_task == "Text Classification" and input_text:
         st.subheader("Classification:")
         result = classify_text(input_text)
-        st.write(f"The text is classified as: {result}")
-
+        try:
+            st.write(f"The text is classified as: {result}")
+        except:
+            st.write("Please try after one hour")
+        
     elif selected_task == "Text Rephrasing" and input_text:
         st.subheader("Text Rephrasing:")
         result = rephrase_text(input_text)
-        st.write(result)
+        try:
+            st.write(result)
+        except:
+            st.write("Please try after one hour")
+        
 
     elif selected_task == "Code" and input_text:
         st.subheader("Code:")
         result = LLMModel(input_text)
-        st.write(result)
+        try:
+            st.write(result)
+        except:
+            st.write("Please try after one hour")
+        
 
     else:
         st.info("Please enter text and select a task from the sidebar.")
