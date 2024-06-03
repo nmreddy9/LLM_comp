@@ -42,7 +42,7 @@ def text_generator(input_text):
 
 def LLMModel(input_text):
     repo_id = "tiiuae/falcon-7b-instruct"
-    hfid = "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"
+    hfid = "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"
     llm = HuggingFaceHub(huggingfacehub_api_token=hfid, repo_id=repo_id)
 
     template = """Question : {question} \n
