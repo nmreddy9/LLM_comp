@@ -3,7 +3,10 @@ from dotenv import load_dotenv
 from transformers import pipeline
 from langchain import HuggingFaceHub
 from langchain import PromptTemplate, LLMChain
-load_dotenv()
+from pathlib import Path
+#load_dotenv()
+dotenv_path = Path('LLM_comp/.env')
+load_dotenv(dotenv_path=dotenv_path)
 hf_id = os.getenv('HF_KEY')
 hfid = hf_id 
 
