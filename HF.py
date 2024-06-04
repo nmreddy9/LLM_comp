@@ -3,7 +3,7 @@ from transformers import pipeline
 from langchain import HuggingFaceHub
 from langchain import PromptTemplate, LLMChain
 
-hfid = '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'
+hfid = hf_key 
 
 def summarize_text(input_text):
 
