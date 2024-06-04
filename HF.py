@@ -8,7 +8,7 @@ def summarize_text(input_text):
 
     repo_id = "pszemraj/led-large-book-summary"
     # hfid = "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"
-    hfid = "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"
+    hfid = "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"
 
     llm = HuggingFaceHub(huggingfacehub_api_token=hfid, repo_id=repo_id, model_kwargs={ "max_length":int(len(input_text)), "temperature":0.7})
 
@@ -24,7 +24,7 @@ def summarize_text(input_text):
 
 def text_generator(input_text):
     repo_id = "tiiuae/falcon-7b-instruct"
-    hfid = "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"
+    hfid = "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"
     llm = HuggingFaceHub(huggingfacehub_api_token=hfid, repo_id=repo_id, model_kwargs={ "min_length":400, "max_length":1000,  "temperature":0.9})
 
 
@@ -42,7 +42,7 @@ def text_generator(input_text):
 
 def LLMModel(input_text):
     repo_id = "tiiuae/falcon-7b-instruct"
-    hfid = "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"
+    hfid = "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"
     llm = HuggingFaceHub(huggingfacehub_api_token=hfid, repo_id=repo_id)
 
     template = """Question : {question} \n
