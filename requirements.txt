@@ -2,3 +2,4 @@ streamlit
 transformers
 langchain
 langchain_community
+python-dotenv
