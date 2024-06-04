@@ -1,9 +1,11 @@
 import streamlit as st
+from dotenv import load_dotenv
 from transformers import pipeline
 from langchain import HuggingFaceHub
 from langchain import PromptTemplate, LLMChain
-
-hfid = hf_key 
+load_dotenv()
+hf_id = os.getenv('HF_KEY')
+hfid = hf_id 
 
 def summarize_text(input_text):
 
